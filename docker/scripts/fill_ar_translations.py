@@ -16,7 +16,7 @@ PO_PATHS = [
     REPO_ROOT / "src/frappe/frappe/locale/ar.po",
     REPO_ROOT / "src/erpnext/erpnext/locale/ar.po",
 ]
-CACHE_PATH = Path(__file__).resolve().parent / ".ar_translation_cache.json"
+CACHE_PATH = Path("/tmp/ar_translation_cache.json")
 
 MANUAL_OVERRIDES: dict[str, str] = {
     "Document Naming": "تسمية المستندات",
@@ -251,7 +251,10 @@ def main() -> int:
         totals[str(po_path)] = count
         print(f"  Filled {count} empty translations")
 
-    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+    try:
+        CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+    except OSError as exc:
+        print(f"  Warning: could not write cache ({exc})")
 
     print("\nSummary:")
     for path, count in totals.items():
@@ -263,3 +266,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
