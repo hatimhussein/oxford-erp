@@ -319,12 +319,11 @@ function markReset(step) {
 
 							<div v-if="!step.is_complete">
 								<div v-if="!step.is_skipped">
-									<div class="ml-auto onb-show-on-hover text-sm w-12 text-right">
+									<div class="onb-skip-action onb-show-on-hover text-sm w-12">
 										<span
 											style="
 												font-size: 12px;
 												vertical-align: text-top;
-												margin-right: 0px;
 											"
 											class="text-ink-gray-7"
 											@click="markSkip(step)"
@@ -334,12 +333,11 @@ function markReset(step) {
 									</div>
 								</div>
 								<div v-if="step.is_skipped">
-									<div class="ml-auto onb-show-on-hover text-sm w-12 text-right">
+									<div class="onb-skip-action onb-show-on-hover text-sm w-12">
 										<span
 											style="
 												font-size: 12px;
 												vertical-align: text-top;
-												margin-right: 0px;
 											"
 											class="text-ink-gray-7"
 											@click="markReset(step)"
