@@ -1,0 +1,5 @@
+# Persistent bench runtime data (sites, env, logs — not your app source)
+data/
+
+# Local env overrides (keep .env tracked or copy from .env.example)
+# .env

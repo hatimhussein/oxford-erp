@@ -1,0 +1,89 @@
+# FrappeDev — local development stack
+# App source: ../src/{frappe,erpnext,education} (bind mounts — single source of truth)
+# Bench runtime: ./data/bench (sites, env, logs — persisted, not your git repos)
+
+name: frappedev
+
+services:
+  mariadb:
+    image: mariadb:11.8
+    container_name: frappedev-mariadb
+    restart: unless-stopped
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --skip-character-set-client-handshake
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    ports:
+      - "${MARIADB_PORT:-3306}:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+    networks:
+      - frappe-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: frappedev-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks:
+      - frappe-network
+
+  frappe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BENCH_IMAGE_TAG: ${BENCH_IMAGE_TAG:-v5.31.0}
+    container_name: frappedev-frappe
+    init: true
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      MARIADB_HOST: mariadb
+      REDIS_HOST: redis
+    volumes:
+      # Local git repos — bind-mounted from host (Docker Desktop translates D:\… paths)
+      # Use :cached on macOS; ignored on Windows/Linux but harmless.
+      - ../src/frappe:/workspace/src/frappe:cached
+      - ../src/erpnext:/workspace/src/erpnext:cached
+      - ../src/education:/workspace/src/education:cached
+      # Bench runtime (sites, Python env, logs) — separate from git repos
+      - ./data/bench:/home/frappe/frappe-bench
+      # Live-mount init scripts so you can tweak without rebuilding the image
+      - ./init.sh:/workspace/docker/init.sh:ro
+      - ./scripts:/workspace/docker/scripts:ro
+    ports:
+      - "${WEB_PORT:-8000}:8000"
+      - "${SOCKETIO_PORT:-9000}:9000"
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - frappe-network
+
+volumes:
+  mariadb-data:
+  redis-data:
+
+networks:
+  frappe-network:
+    driver: bridge
