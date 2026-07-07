@@ -6,9 +6,6 @@ echo "==> Configuring Git safe.directory for bind-mounted repos"
 git config --global --add safe.directory /workspace/src/frappe
 git config --global --add safe.directory /workspace/src/erpnext
 git config --global --add safe.directory /workspace/src/education
-git config --global --add safe.directory /workspace/src/frappe/.git
-git config --global --add safe.directory /workspace/src/erpnext/.git
-git config --global --add safe.directory /workspace/src/education/.git
 
 _SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=ensure-node-path.sh

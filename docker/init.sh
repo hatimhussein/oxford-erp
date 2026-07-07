@@ -30,8 +30,8 @@ bench_is_initialized() {
 require_local_repos() {
 	for app in frappe erpnext education; do
 		git config --global --add safe.directory "${WORKSPACE_SRC}/${app}" 2>/dev/null || true
-		if [[ ! -d "${WORKSPACE_SRC}/${app}/.git" ]]; then
-			echo "ERROR: Expected git repo at ${WORKSPACE_SRC}/${app}" >&2
+		if [[ ! -d "${WORKSPACE_SRC}/${app}" ]]; then
+			echo "ERROR: Missing app directory: ${WORKSPACE_SRC}/${app}" >&2
 			exit 1
 		fi
 		if [[ ! -r "${WORKSPACE_SRC}/${app}/pyproject.toml" ]]; then
