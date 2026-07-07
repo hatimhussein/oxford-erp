@@ -1,0 +1,13 @@
+@import './assets/Inter/inter.css';
+@import 'frappe-ui/src/style.css';
+
+[dir='rtl'] body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+}
+
+[dir='rtl'] input,
+[dir='rtl'] textarea,
+[dir='rtl'] select {
+  direction: rtl;
+  text-align: right;
+}

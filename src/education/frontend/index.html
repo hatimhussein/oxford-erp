@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}" dir="{{ layout_direction or 'ltr' }}">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frappe Education</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="modals"></div>
+    <div id="popovers"></div>
+
+    <script>
+      window.csrf_token = '{{ frappe.session.csrf_token }}'
+      window.document.title = '{{ abbr }}'
+      window.education_portal = {
+        lang: '{{ lang or "en" }}',
+        layout_direction: '{{ layout_direction or "ltr" }}',
+      }
+      document.documentElement.lang = window.education_portal.lang
+      document.documentElement.dir = window.education_portal.layout_direction
+
+      let link = document.querySelector("link[rel~='icon']");
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      link.href = '{{ logo }}'
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

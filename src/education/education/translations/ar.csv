@@ -1,0 +1,691 @@
+ Save ,حفظ
+...Adding Article to Topics,...جاري إضافة المقال للوحدات
+...Adding Course to Programs,...جاري إضافة الدورة للبرامج
+...Adding Quiz to Topics,...جاري إضافة الاختبار للوحدات
+...Adding Topic to Courses,...جاري إضافة الوحدة للدورات
+{0} - {1} is inactive student,{0} - {1} طالب غير نشط
+{0} - {1} is not enrolled in the Batch {2},{0} - {1} غير مسجّل في الدفعة {2}
+{0} - {1} is not enrolled in the Course {2},{0} - {1} غير مسجّل في الدورة {2}
+{0} {1} has been added to all the selected topics successfully.,تمت إضافة {0} {1} لجميع الوحدات المحددة.
+{0} is mandatory,{0} إلزامي
+{0} or {1} is mandatory,{0} أو {1} إلزامي
+{0} Student Groups created.,تم إنشاء {0} مجموعة تعليمية.
+{0} Students have been enrolled,تم تسجيل {0} طالب
+A question must have more than one options,يجب أن يحتوي السؤال على أكثر من خيار
+A qustion must have at least one correct options,يجب أن يحتوي السؤال على خيار صحيح واحد على الأقل
+A-,A-
+A+,A+
+AB-,AB-
+AB+,AB+
+Absent,غائب
+Absent Student Report,تقرير غياب الطلاب
+Academic,أكاديمي
+Academic Term,الفصل الدراسي
+Academic Term {0} does not belong to Academic Year {1},الفصل الدراسي {0} لا ينتمي للعام الدراسي {1}
+Academic Year,العام الدراسي
+Academic Year Name,اسم العام الدراسي
+Academics,الشؤون الأكاديمية
+Account,الحساب
+Accounting,المحاسبة
+Accounting Defaults,الإعدادات المحاسبية الافتراضية
+Accounting Defaults are not set in row {0} for component {1} ,الإعدادات المحاسبية غير محددة في الصف {0} للمكوّن {1}
+Accounting Dimensions,أبعاد المحاسبة
+Accounting Ledger,دفتر الأستاذ
+Accounts,الحسابات
+Achievement,إنجاز
+Action,إجراء
+Actions,الإجراءات
+Active,نشط
+Activity,النشاط
+Activity Date,تاريخ النشاط
+Add,إضافة
+Add Article to Topics,إضافة المقال إلى الوحدات
+Add Course to Programs,إضافة الدورة إلى البرامج
+Add Guardians to Email Group,إضافة أولياء الأمور لمجموعة البريد
+Add letterhead,إضافة ترويسة
+Add Quiz to Topics,إضافة الاختبار إلى الوحدات
+Add to Courses,إضافة إلى الدورات
+Add to Programs,إضافة إلى البرامج
+Add to Topics,إضافة إلى الوحدات
+Add Topic to Courses,إضافة الوحدة إلى الدورات
+Address,العنوان
+Address Line 1,العنوان - السطر الأول
+Address Line 2,العنوان - السطر الثاني
+Admission End Date,تاريخ انتهاء القبول
+Admission End Date should be greater than Admission Start Date.,يجب أن يكون تاريخ انتهاء القبول بعد تاريخ البدء.
+Admission Start Date,تاريخ بدء القبول
+Admissions,القبول والتسجيل
+Admissions for {0},القبول لعام {0}
+Admitted,مقبول للتسجيل
+Against Invoice,مقابل الفاتورة
+All Student Admissions,جميع طلبات القبول
+Alternate Number,رقم بديل
+amber,كهرماني
+Amended From,معدّل من
+Amount,المبلغ
+Application Date,تاريخ التقديم
+Application Fee,رسوم التقديم
+Application Status,حالة التقديم
+Applied,مقدّم
+Approve,قبول
+Approved,مقبول
+Article,المقال
+As Examiner,كمُمتحن
+As Supervisor,كمشرف
+Assessment,التقييم
+Assessment Criteria,معايير التقييم
+Assessment Criteria Group,مجموعة معايير التقييم
+Assessment Group,مجموعة التقييم
+Assessment Group Name,اسم مجموعة التقييم
+Assessment Name,اسم التقييم
+Assessment Plan,خطة التقييم
+Assessment Plan Criteria,معايير خطة التقييم
+Assessment Plan Name,اسم خطة التقييم
+Assessment Plan Status,حالة خطة التقييم
+Assessment Reports,تقارير التقييم
+Assessment Result,نتيجة التقييم
+Assessment Result Detail,تفاصيل نتيجة التقييم
+Assessment Result record {0} already exists.,سجل نتيجة التقييم {0} موجود مسبقاً.
+Assessment Result Tool,أداة نتائج التقييم
+Assessment Terms,شروط التقييم
+Attendance,الحضور
+Attendance Based On,تسجيل الحضور بناءً على
+Attendance Based on Course Schedule,تسجيل الحضور حسب جدول الدورة
+Attendance cannot be marked for {0} as it is a holiday.,لا يمكن تسجيل الحضور لـ {0} لأنه يوم عطلة.
+Attendance cannot be marked for future dates.,لا يمكن تسجيل الحضور لتواريخ مستقبلية.
+Attendance cannot be marked outside of Academic Year {0},لا يمكن تسجيل الحضور خارج العام الدراسي {0}
+Attendance Freeze Date,تاريخ تجميد الحضور
+Attendance has been marked successfully.,تم تسجيل الحضور بنجاح.
+Attendance Reports,تقارير الحضور
+Author,المؤلف
+B-,B-
+B+,B+
+Based On,بناءً على
+Batch,الدفعة
+Batch is mandatory in row {0},الدفعة إلزامية في الصف {0}
+Batch Name,اسم الدفعة
+Blood Group,فصيلة الدم
+blue,أزرق
+Boarding Student,طالب داخلي
+By default, a new User is created for every new Student. If enabled, no new User will be created when a new Student is created.,افتراضياً، يُنشأ مستخدم جديد لكل طالب. عند التفعيل، لن يُنشأ مستخدم للطالب الجديد.
+By default, Sales Invoice will be created against Program Enrollment / Fee Schedule.
+If enabled Sales Order will be created,افتراضياً، تُنشأ فاتورة المبيعات من الالتحاق بالبرنامج/جدول الرسوم.
+عند التفعيل، يُنشأ أمر البيع
+By default, the Sales Invoice Created will be in Draft Mode. If enabled, the Sales Invoice will be submitted once created.,افتراضياً، تُنشأ فاتورة المبيعات كمسودة. عند التفعيل، تُرسل الفاتورة مباشرة بعد الإنشاء.
+By default, the Sales Invoice's  Posting Date will be equal to Fee Schedule's Posting Date. If disabled then Sales Invoice's Posting Date will be today's date.,افتراضياً، يطابق تاريخ ترحيل الفاتورة تاريخ جدول الرسوم. عند التعطيل، يُستخدم تاريخ اليوم.
+By default, the Sales Order Created will be in Draft Mode. If enabled, the Sales Order will be submitted once created.,افتراضياً، يُنشأ أمر البيع كمسودة. عند التفعيل، يُرسل مباشرة بعد الإنشاء.
+By default, the Sales Order's  Transaction Date will be equal to Fee Schedule's Transaction Date. If disabled then Sales Order's Transaction Date will be today's date.,افتراضياً، يطابق تاريخ أمر البيع تاريخ جدول الرسوم. عند التعطيل، يُستخدم تاريخ اليوم.
+Cancelled,ملغى
+Cannot mark attendance for future dates.,لا يمكن تسجيل الحضور لتواريخ مستقبلية.
+Cannot set multiple Item Defaults for a company.,لا يمكن تعيين أكثر من إعداد افتراضي للصنف لشركة واحدة.
+Captured,تم التحصيل
+Category,الفئة
+Check all,تحديد الكل
+Check this if the Student is residing at the Institute's Hostel.,فعّل هذا إذا كان الطالب مقيماً في سكن المؤسسة.
+Check this to mark the student as present in case the student is not attending the institute to participate or represent the institute in any event.,فعّل هذا لتسجيل الطالب حاضراً عند مشاركته في فعالية خارج المؤسسة.
+City,المدينة
+Class Schedule Color,لون جدول الحصص
+Color,اللون
+Comment,ملاحظة
+Company,الشركة
+Compare List function takes on list arguments,دالة المقارنة تتطلب قوائم كمعاملات
+Components,المكوّنات
+Connections,الارتباطات
+Content,المحتوى
+Content Masters,المحتوى التعليمي
+Content Type,نوع المحتوى
+Correct,صحيح
+Cost Center,مركز التكلفة
+Country,الدولة
+Course,الدورة
+Course {0} has been added to all the selected programs successfully.,تمت إضافة الدورة {0} لجميع البرامج المحددة.
+Course Activity,نشاط الدورة
+Course and Assessment,الدورة والتقييم
+Course Assessment Criteria,معايير تقييم الدورة
+Course Code,رمز الدورة
+Course End Date,تاريخ نهاية الدورة
+Course Enrollment,الالتحاق بالدورة
+Course Enrollment {0} does not exists,الالتحاق بالدورة {0} غير موجود
+Course is mandatory in row {0},الدورة إلزامية في الصف {0}
+Course Name,اسم الدورة
+Course Schedule,جدول الدورات
+Course Scheduling Failed,فشلت جدولة الدورة
+Course Scheduling Tool,أداة جدولة الدورات
+Course Start Date,تاريخ بداية الدورة
+Course Start Date cannot be greater than Course End Date.,لا يمكن أن يكون تاريخ بداية الدورة بعد تاريخ نهايته.
+Course Topic,وحدة الدورة
+Course wise Assessment Report,تقرير التقييم حسب الدورة
+Courses,الدورات
+Courses updated,تم تحديث الدورات
+Create,إنشاء
+Create Fee Schedule,إنشاء جدول الرسوم
+Create Sales Order instead of Sales Invoice,إنشاء أمر بيع بدلاً من فاتورة المبيعات
+Create Student Groups,إنشاء المجموعات التعليمية
+Creating student groups,جاري إنشاء المجموعات التعليمية
+Currency,العملة
+Current Academic Term,الفصل الدراسي الحالي
+Current Academic Year,العام الدراسي الحالي
+Customer,العميل
+Customer {0} created and linked to Student,تم إنشاء العميل {0} وربطه بالطالب
+Customer {0} updated,تم تحديث العميل {0}
+Customer Details,بيانات العميل
+Customer Group,مجموعة العملاء
+cyan,سماوي
+Date,التاريخ
+Date of Birth,تاريخ الميلاد
+Date of Birth cannot be greater than Joining Date.,لا يمكن أن يكون تاريخ الميلاد بعد تاريخ الالتحاق.
+Date of Birth cannot be greater than today.,لا يمكن أن يكون تاريخ الميلاد بعد اليوم.
+Date of Leaving,تاريخ المغادرة
+Days HTML,أيام HTML
+Default Cost Center,مركز التكلفة الافتراضي
+Default Grading Scale,مقياس الدرجات الافتراضي
+Default Income Account,حساب الإيرادات الافتراضي
+Department,القسم
+Description,الوصف
+Designation,المسمى الوظيفي
+Details,التفاصيل
+Disabled,معطّل
+Discount cannot be greater than 100%  in row {0},لا يمكن أن يتجاوز الخصم 100% في الصف {0}
+Discount(%),الخصم (%)
+Draft,مسودة
+Due Date,تاريخ الاستحقاق
+Duplicate Entry,إدخال مكرر
+Duplicate roll number for student {0},رقم مكرر في المجموعة للطالب {0}
+Duration,المدة
+Edit Posting Date and Time,تعديل تاريخ ووقت الترحيل
+Education,إدارة التعليم
+Education Settings,إعدادات التعليم
+Eligibility and Details,شروط الأهلية والتفاصيل
+Email,البريد الإلكتروني
+Email Address,البريد الإلكتروني
+Employee,الموظف
+Employee ID is linked with another instructor,رقم الموظف مرتبط بمدرب آخر
+Employee Number,رقم الموظف
+Enable Admission Application,تفعيل طلب القبول
+Enabled,مفعّل
+Enroll,تسجيل
+Enroll Students,تسجيل الطلاب
+Enrolled courses,الدورات المسجّلة
+Enrolling student,جاري تسجيل الطالب
+Enrolling students,جاري تسجيل الطلاب
+Enrollment,الالتحاق
+Enrollment Date,تاريخ الالتحاق
+Enrollment Details,تفاصيل الالتحاق
+Enter 0 to waive limit,أدخل 0 لإلغاء الحد
+Error during payment: {0},خطأ أثناء الدفع: {0}
+Error Log,سجل الأخطاء
+Evaluate,تقييم
+Examiner,المُمتحن
+Examiner Name,اسم المُمتحن
+Exit,المغادرة
+Fail,راسب
+Failed,فشل
+Failure Description,وصف الخطأ
+Father,الأب
+Fee,الرسوم
+Fee Breakup (each student),تفصيل الرسوم (لكل طالب)
+Fee Category,فئة الرسوم
+Fee Category Default,الإعداد الافتراضي لفئة الرسوم
+Fee Component,مكوّن الرسوم
+Fee Component {0} is not part of Fee Structure {1},مكوّن الرسوم {0} ليس جزءاً من الهيكل {1}
+Fee Creation Failed,فشل إنشاء الرسوم
+Fee Management,إدارة الرسوم
+Fee Records Created - {0},تم إنشاء سجلات الرسوم - {0}
+Fee Reports,تقارير الرسوم
+Fee Schedule,جدول الرسوم
+Fee Schedule Student Group,مجموعة طلاب جدول الرسوم
+Fee Structure,هيكل الرسوم
+Fees,الرسوم
+Fees Category,فئة الرسوم
+Fees Collected,الرسوم المحصّلة
+Female,أنثى
+Final Assessment Grades,الدرجات النهائية للتقييم
+First Name,الاسم الأول
+Following course schedules were created,تم إنشاء جداول الدورات التالية
+For Batch based Student Group, the Student Batch will be validated for every Student from the Program Enrollment.,للمجموعة حسب الدفعة، تُتحقق دفعة كل طالب من سجل الالتحاق بالبرنامج.
+For Course based Student Group, the Course will be validated for every Student from the enrolled Courses in Program Enrollment.,للمجموعة حسب الدورة، تُتحقق دورة كل طالب من الدورات المسجّلة.
+Friday,الجمعة
+From Date,من تاريخ
+From Time,من الساعة
+From Time cannot be greater than To Time.,لا يمكن أن يكون وقت البداية بعد وقت النهاية.
+Full Name,الاسم الكامل
+Gender,الجنس
+General,عام
+Get Courses,جلب الدورات
+Get Students,جلب الطلاب
+Get Students From,جلب الطلاب من
+Grade,التقدير
+Grade Code,رمز التقدير
+Grade Description,وصف التقدير
+Grading Basis,أساس التقدير
+Grading Scale,مقياس الدرجات
+Grading Scale Interval,فترة مقياس الدرجات
+Grading Scale Intervals,فترات مقياس الدرجات
+Grading Scale Name,اسم مقياس الدرجات
+Grand Total,الإجمالي الكلي
+green,أخضر
+Group Based on,تجميع المجموعة حسب
+Group Based On,تجميع المجموعة حسب
+Group Roll No,رقم الطالب في المجموعة
+Group Roll Number,رقم الطالب في المجموعة
+Guardian,ولي الأمر
+Guardian Details,بيانات ولي الأمر
+Guardian Interest,اهتمام ولي الأمر
+Guardian Interests,اهتمامات ولي الأمر
+Guardian Name,اسم ولي الأمر
+Guardian Of,ولي أمر لـ
+Guardian Student,طالب ولي الأمر
+Guardian1 Email ID,بريد ولي الأمر الأول
+Guardian1 Mobile No,جوال ولي الأمر الأول
+Guardian1 Name,اسم ولي الأمر الأول
+Guardian2 Email ID,بريد ولي الأمر الثاني
+Guardian2 Mobile No,جوال ولي الأمر الثاني
+Guardian2 Name,اسم ولي الأمر الثاني
+Guardians,أولياء الأمور
+Hero Image,الصورة الرئيسية
+Home,الرئيسية
+House Name,اسم البيت
+If enabled, field Academic Term will be Mandatory in Program Enrollment Tool.,عند التفعيل، يصبح الفصل الدراسي إلزامياً في أداة الالتحاق.
+If enabled, the attendance will be marked on Course Schedule basis and will be mandatory.
+
+If disabled, the attendance will be marked on Student Group Basis for that particular date.,عند التفعيل، يُسجّل الحضور حسب جدول الدورة.
+
+عند التعطيل، يُسجّل حسب المجموعة التعليمية لذلك التاريخ.
+Image,الصورة
+In Process,قيد المعالجة
+In Words,كتابةً
+Include Payment,تضمين الدفع
+Income Account,حساب الإيرادات
+Institution,المؤسسة التعليمية
+Instructor,المدرب
+Instructor Log,سجل المدرب
+Instructor Name,اسم المدرب
+Instructor Records to be created by,إنشاء سجلات المدرب بواسطة
+Instructors,المدربون
+Interest,الاهتمام
+Interests,الاهتمامات
+Intervals,الفترات
+Introduction,المقدمة
+Invalid document provided.,المستند المقدّم غير صالح.
+Invalid Enrollment {0} for student {1},الالتحاق {0} غير صالح للطالب {1}
+Invite as User,دعوة كمستخدم
+Invoice Created,تم إنشاء الفاتورة
+Invoice Pending,الفاتورة معلّقة
+Is Correct,إجابة صحيحة
+Is Group,مجموعة
+Is Mandatory,إلزامي
+Is Time-Bound,محدّد بوقت
+Item,الصنف
+Joining Date,تاريخ الالتحاق
+Joining Date can not be greater than Leaving Date,لا يمكن أن يكون تاريخ الالتحاق بعد تاريخ المغادرة
+Language Name,اسم اللغة
+Last Name,اسم العائلة
+Latest Attempt,آخر محاولة
+Latest Highest Score,أعلى درجة
+Leave,إجازة
+Leave Application,طلب الإجازة
+Leave application {0} already exists against the student {1},طلب الإجازة {0} موجود مسبقاً للطالب {1}
+Leave blank if you make students groups per year,اتركه فارغاً إذا أنشأت مجموعات سنوية
+Leave unchecked if you don't want to consider batch while making course based groups.,اتركه غير محدد إذا لم ترد مراعاة الدفعة عند إنشاء مجموعات حسب الدورة.
+Leaving Certificate Number,رقم شهادة المغادرة
+Ledger Entries will be created against the company mentioned here.,تُنشأ قيود دفتر الأستاذ للشركة المحددة هنا.
+Left,يسار
+Letter Head,ترويسة الرسالة
+Log,السجل
+Make Academic Term Mandatory,جعل الفصل الدراسي إلزامياً
+Male,ذكر
+Mandatory,إلزامي
+Mandatory field - Academic Year,حقل إلزامي - العام الدراسي
+Mandatory field - Get Students From,حقل إلزامي - جلب الطلاب من
+Mandatory field - Program,حقل إلزامي - البرنامج
+Mandatory Fields,حقول إلزامية
+Mark as Present,تسجيل كحاضر
+Mark Attendance,تسجيل الحضور
+Marking attendance,جاري تسجيل الحضور
+Max Attempts,الحد الأقصى للمحاولات
+Max Strength,الحد الأقصى للطلاب
+Maximum Age,الحد الأقصى للعمر
+Maximum Assessment Score,الدرجة القصوى للتقييم
+Maximum attempts for this quiz reached!,تم الوصول للحد الأقصى من محاولات الاختبار!
+Maximum Score,الدرجة القصوى
+Medical,طبي
+Middle Name,الاسم الأوسط
+Minimum Age,الحد الأدنى للعمر
+Mobile,الجوال
+Mobile Number,رقم الجوال
+Monday,الاثنين
+Month,الشهر
+Mother,الأم
+Multiple Correct Answer,إجابات متعددة صحيحة
+Name,الاسم
+Naming Series,سلسلة الترقيم
+Naming Series (for Student Applicant),سلسلة الترقيم (لطالب مقدّم التسجيل)
+Nationality,الجنسية
+New Academic Term,الفصل الدراسي الجديد
+New Academic Year,العام الدراسي الجديد
+New Program,البرنامج الجديد
+New Student Batch,الدفعة الجديدة
+Newsletter,النشرة البريدية
+No Academic Terms found for Academic Year {0},لا توجد فصول دراسية للعام {0}
+No attendance has been marked for {0} as it is a Holiday,لم يُسجّل حضور لـ {0} لأنه يوم عطلة
+No classes found in the leave period,لا توجد حصص في فترة الإجازة
+No correct answer is set for {0},لم يُحدد إجابة صحيحة لـ {0}
+No Result to submit,لا توجد نتيجة للإرسال
+No students found,لم يتم العثور على طلاب
+No students Found,لم يتم العثور على طلاب
+No Students in,لا يوجد طلاب في
+No. of Meetings Attended by Parents,عدد الاجتماعات التي حضرها أولياء الأمور
+Not eligible for the admission in this program as per Date Of Birth,غير مؤهل للقبول في هذا البرنامج حسب تاريخ الميلاد
+O-,O-
+O+,O+
+Occupation,المهنة
+Option,الخيار
+Options,الخيارات
+orange,برتقالي
+Order Created,تم إنشاء الأمر
+Order ID,رقم الطلب
+Order Pending,الأمر معلّق
+Other details,تفاصيل أخرى
+Other Details,تفاصيل أخرى
+Other Reports,تقارير أخرى
+Others,أخرى
+Outstanding Amount,المبلغ المستحق
+Outstanding Amt,المبلغ المستحق
+Overdue,متأخر
+Paid,مدفوع
+Parent Assessment Group,مجموعة التقييم الأب
+Pass,ناجح
+Passing Score,درجة النجاح
+Passing Score value should be between 0 and 100,يجب أن تكون درجة النجاح بين 0 و 100
+Payment,الدفع
+Payment for {0} course,دفع مقابل دورة {0}
+Payment ID,رقم الدفع
+Payment Request,طلب الدفع
+Payment request {0} created,تم إنشاء طلب الدفع {0}
+Payments,المدفوعات
+Personal Details,البيانات الشخصية
+Pincode,الرمز البريدي
+pink,وردي
+Please add programs to enable admission application.,يرجى إضافة برامج لتفعيل طلب القبول.
+Please define grade for Threshold 0%,يرجى تحديد تقدير للحد 0%
+Please enter the Academic Year and set the Start and End date.,يرجى إدخال العام الدراسي وتحديد تاريخي البداية والنهاية.
+Please fill in all the details to generate Assessment Result.,يرجى تعبئة جميع التفاصيل لإنشاء نتيجة التقييم.
+Please fill in all the mandatory fields.,يرجى تعبئة جميع الحقول الإلزامية.
+Please select a Program first.,يرجى اختيار البرنامج أولاً.
+Please select at least one day to schedule the course.,يرجى اختيار يوم واحد على الأقل لجدولة الدورة.
+Please select Course,يرجى اختيار الدورة
+Please select date,يرجى اختيار التاريخ
+Please select Employee,يرجى اختيار الموظف
+Please select Program,يرجى اختيار البرنامج
+Please set a default Holiday List for Company {0},يرجى تعيين قائمة عطلات افتراضية للشركة {0}
+Please set Email Address,يرجى إدخال البريد الإلكتروني
+Please setup Instructor Naming System in Education > Education Settings,يرجى إعداد نظام تسمية المدربين من إعدادات التعليم
+Please setup Students under Student Groups,يرجى إعداد الطلاب ضمن المجموعات التعليمية
+Portal Settings,إعدادات البوابة
+Posting Date,تاريخ الترحيل
+Posting Time,وقت الترحيل
+Present,حاضر
+Print Heading,عنوان الطباعة
+Print Report Card,طباعة بطاقة التقرير
+Print Settings,إعدادات الطباعة
+Printing Settings,إعدادات الطباعة
+Program,البرنامج التعليمي
+Program Abbreviation,اختصار البرنامج
+Program and Course,البرنامج والدورة
+Program Course,مقرر البرنامج
+Program Enrollment,الالتحاق بالبرنامج
+Program Enrollment Course,مقرر الالتحاق بالبرنامج
+Program Enrollment Tool,أداة الالتحاق بالبرنامج
+Program Enrollment Tool Student,طالب أداة الالتحاق بالبرنامج
+Program Fee,رسوم البرنامج
+Program in the Fee Structure and Student Group {0} are different.,البرنامج في هيكل الرسوم يختلف عن مجموعة الطلاب {0}.
+Program Name,اسم البرنامج
+Program wise Fee Collection,تحصيل الرسوم حسب البرنامج
+Programs,البرامج التعليمية
+Programs updated,تم تحديث البرامج
+Publish Date,تاريخ النشر
+Publish on website,النشر على الموقع
+purple,بنفسجي
+Question,السؤال
+Question Link,رابط السؤال
+Quiz,الاختبار
+Quiz {0} does not exist,الاختبار {0} غير موجود
+Quiz Configuration,إعدادات الاختبار
+Quiz Question,سؤال الاختبار
+Quiz Result,نتيجة الاختبار
+Razorpay Data,بيانات Razorpay
+Razorpay Key,مفتاح Razorpay
+Razorpay Secret,سر Razorpay
+Reason,السبب
+Reason For Leaving,سبب المغادرة
+Receivable Account,حساب المدينين
+red,أحمر
+Reject,رفض
+Rejected,مرفوض
+Relation,صلة القرابة
+Relation with Guardian1,صلة القرابة مع ولي الأمر الأول
+Relation with Guardian2,صلة القرابة مع ولي الأمر الثاني
+Relations,العلاقات
+Remaining,المتبقي
+Report,تقرير
+Report Settings,إعدادات التقرير
+Reports,التقارير
+Reschedule,إعادة الجدولة
+Result,النتيجة
+Result already Submitted,تم إرسال النتيجة مسبقاً
+Result HTML,نتيجة HTML
+Room,القاعة الدراسية
+Room Name,اسم القاعة
+Room Number,رقم القاعة
+Route,المسار
+Row {0}:Sibling Date of Birth cannot be greater than today.,الصف {0}: تاريخ ميلاد الأخ/الأخت لا يمكن أن يكون بعد اليوم.
+Sales Invoice,فاتورة المبيعات
+Sales Invoice Posting Date should be same as Fee Schedule Posting Date,تاريخ ترحيل الفاتورة يطابق تاريخ جدول الرسوم
+Sales Order,أمر البيع
+Sales Order Posting Date should be same as Fee Schedule Posting Date,تاريخ أمر البيع يطابق تاريخ جدول الرسوم
+Saturday,السبت
+Saved,محفوظ
+Schedule,الجدولة
+Schedule Course,جدولة الدورة
+Schedule Date,تاريخ الجدولة
+Scheduled Upto,مجدول حتى
+Scheduling...,جاري الجدولة...
+School / College Logo,شعار المدرسة/المركز
+School / College Name Abbreviation,اختصار اسم المدرسة/المركز
+School House,بيت المدرسة
+Score,الدرجة
+Score cannot be greater than Maximum Score,لا يمكن أن تتجاوز الدرجة الحد الأقصى
+Score out of 100,الدرجة من 100
+Seating Capacity,السعة الاستيعابية
+Select students manually for the Activity based Group,اختر الطلاب يدوياً للمجموعة القائمة على النشاط
+Select the program first,يرجى اختيار البرنامج أولاً
+Selected Option,الخيار المحدد
+Send Payment Request,إرسال طلب الدفع
+Send Payment Request Email,إرسال بريد طلب الدفع
+Separate course based Group for every Batch,إنشاء مجموعة لكل دفعة حسب الدورة
+Series,السلسلة
+Set 0 for no limit,ضع 0 لعدم التحديد
+Settings,الإعدادات
+Setup,الإعداد الأولي
+Show Marks,عرض الدرجات
+Sibling Details,بيانات الإخوة
+Siblings,الإخوة
+Signature,التوقيع
+Single Correct Answer,إجابة واحدة صحيحة
+Skip User creation for new Student,تخطي إنشاء مستخدم للطالب الجديد
+State,المنطقة
+Status,الحالة
+Student,الطالب
+Student {0} - {1} appears Multiple times in row {2} & {3},الطالب {0} - {1} يظهر أكثر من مرة في الصف {2} و {3}
+Student {0} does not belong to group {1},الطالب {0} لا ينتمي للمجموعة {1}
+Student {0} exist against student applicant {1},الطالب {0} موجود مسبقاً لطالب التقديم {1}
+Student {0}: {1} does not belong to Student Group {2},الطالب {0}: {1} لا ينتمي للمجموعة {2}
+Student Address,عنوان الطالب
+Student Admission,قبول الطلاب
+Student Admission Program,برنامج القبول
+Student Admissions,قبول الطلاب
+Student and Guardian Contact Details,بيانات التواصل مع الطلاب وأولياء الأمور
+Student Applicant,طالب مقدّم للتسجيل
+Student Attendance,حضور الطلاب
+Student Attendance record {0} already exists against the Student {1},سجل حضور {0} موجود مسبقاً للطالب {1}
+Student Attendance Tool,أداة تسجيل الحضور
+Student Batch,دفعة الطلاب
+Student Batch Name,اسم الدفعة
+Student Batch-Wise Attendance,تقرير الحضور حسب الدفعة
+Student Category,فئة الطالب
+Student Data,بيانات الطالب
+Student Details,بيانات الطالب
+Student Email,البريد الإلكتروني للطالب
+Student Email Address,البريد الإلكتروني للطالب
+Student Email ID,البريد الإلكتروني للطالب
+Student Fee Collection,تحصيل رسوم الطلاب
+Student Group,المجموعة التعليمية
+Student Group Creation Tool,أداة إنشاء المجموعات التعليمية
+Student Group Creation Tool Course,دورة أداة إنشاء المجموعات
+Student Group Instructor,مدرب المجموعة التعليمية
+Student Group is already updated.,المجموعة التعليمية محدّثة مسبقاً.
+Student Group is mandatory,المجموعة التعليمية إلزامية
+Student Group Name,اسم المجموعة التعليمية
+Student Group Name is mandatory in row {0},اسم المجموعة التعليمية إلزامي في الصف {0}
+Student Group Strength,عدد طلاب المجموعة
+Student Group Student,طالب المجموعة التعليمية
+Student Guardian,ولي أمر الطالب
+Student ID,رقم الطالب
+Student is already enrolled via Course Enrollment {0},الطالب مسجّل مسبقاً عبر الالتحاق {0}
+Student is already enrolled.,الطالب مسجّل مسبقاً.
+Student Leave Application,طلب إجازة الطالب
+Student Log,سجل الطالب
+Student Management,إدارة الطلاب
+Student Mobile No.,رقم جوال الطالب
+Student Mobile Number,رقم جوال الطالب
+Student Monthly Attendance Sheet,كشف الحضور الشهري للطلاب
+Student Name,اسم الطالب
+Student Report Generation Tool,أداة إصدار تقارير الطلاب
+Student Sibling,أخ/أخت الطالب
+Student with email {0} does not exist,لا يوجد طالب بالبريد {0}
+Students,الطلاب
+Students HTML,طلاب HTML
+Studying in Same Institute,يدرس في نفس المؤسسة
+Submit,إرسال
+Submit Sales Invoice from Program Enrollment / Fee Schedule,إرسال فاتورة المبيعات من الالتحاق/جدول الرسوم
+Submit Sales Order from Program Enrollment / Fee Schedule,إرسال أمر البيع من الالتحاق/جدول الرسوم
+Submitted,مُرسل
+Sum of Scores of Assessment Criteria needs to be {0}.,يجب أن يكون مجموع درجات معايير التقييم {0}.
+Summary,الملخص
+Sunday,الأحد
+Supervisor,المشرف
+Supervisor Name,اسم المشرف
+teal,أزرق مخضر
+Term End Date,تاريخ نهاية الفصل
+Term Name,اسم الفصل
+Term Start Date,تاريخ بداية الفصل
+Terms,الشروط
+Terms and Conditions,الشروط والأحكام
+The question cannot be duplicate,لا يمكن تكرار السؤال
+The Term cannot end after the Academic Year {0},لا يمكن أن ينتهي الفصل بعد العام الدراسي {0}
+The Term cannot start before the Academic Year {0},لا يمكن أن يبدأ الفصل قبل العام الدراسي {0}
+There were errors creating Course Schedule,حدثت أخطاء أثناء إنشاء جدول الدورة
+This {0} conflicts with {1} for {2} {3},يتعارض {0} مع {1} لـ {2} {3}
+This article is already added to the existing topics,هذا المقال مضاف مسبقاً للوحدات الحالية
+This course is already added to the existing programs,هذه الدورة مضافة مسبقاً للبرامج الحالية
+This is based on the attendance of this Student,يعتمد على حضور هذا الطالب
+This is based on the course schedules of this Instructor,يعتمد على جداول دورات هذا المدرب
+This quiz is already added to the existing topics,هذا الاختبار مضاف مسبقاً للوحدات الحالية
+This topic is already added to the existing courses,هذه الوحدة مضافة مسبقاً للدورات الحالية
+Threshold,الحد الأدنى
+Thursday,الخميس
+Time Taken,الوقت المستغرق
+Title,العنوان
+To Date,إلى تاريخ
+To Time,إلى الساعة
+Tools,الأدوات
+Topic,الوحدة التعليمية
+Topic {0} has been added to all the selected courses successfully.,تمت إضافة الوحدة {0} لجميع الدورات المحددة.
+Topic Content,محتوى الوحدة
+Topic Name,اسم الوحدة
+Topics,الوحدات التعليمية
+Topics updated,تم تحديث الوحدات
+Total,الإجمالي
+Total Absent,إجمالي الغياب
+Total Amount,المبلغ الإجمالي
+Total amount of Fee Schedules exceeds the Total Amount of Fee Structure,مجموع جداول الرسوم يتجاوز إجمالي هيكل الرسوم
+Total Amount per Student,المبلغ الإجمالي لكل طالب
+Total Leave,إجمالي الإجازات
+Total Leave Days,إجمالي أيام الإجازة
+Total Parents Teacher Meeting,إجمالي اجتماعات أولياء الأمور
+Total Present,إجمالي الحضور
+Total Score,مجموع الدرجات
+Total Student,إجمالي الطلاب
+Total Students,إجمالي الطلاب
+Total Weightage of all Assessment Criteria must be 100%,يجب أن يكون مجموع أوزان معايير التقييم 100%
+Treshold {0}% appears more than once,الحد {0}% يظهر أكثر من مرة
+Tuesday,الثلاثاء
+Type,النوع
+Uncheck all,إلغاء تحديد الكل
+Unpaid,غير مدفوع
+User {0} already exists,المستخدم {0} موجود مسبقاً
+User {0} created,تم إنشاء المستخدم {0}
+User Id,معرّف المستخدم
+User ID,معرّف المستخدم
+Validate Batch for Students in Student Group,التحقق من الدفعة للطلاب في المجموعة التعليمية
+Validate Enrolled Course for Students in Student Group,التحقق من الدورات المسجّلة للطلاب في المجموعة
+Video,الفيديو
+View,عرض
+violet,بنفسجي فاتح
+Wednesday,الأربعاء
+Weightage,الوزن النسبي
+Work Address,عنوان العمل
+Wrong,خاطئ
+Year,السنة
+Year End Date,تاريخ نهاية العام
+Year Start Date,تاريخ بداية العام
+yellow,أصفر
+You are not allowed to enroll for this course,غير مسموح لك بالالتحاق بهذه الدورة
+You are not enrolled in program {0},أنت غير مسجّل في البرنامج {0}
+You have already assessed for the assessment criteria {}.,تم التقييم مسبقاً لمعيار التقييم {}.
+Pay Fees,دفع الرسوم
+Proceed to Payment,المتابعة للدفع
+Apply Leave,تقديم طلب إجازة
+Select Student Group,اختر المجموعة التعليمية
+Leave applied successfully,تم تقديم طلب الإجازة بنجاح
+Error Occured,حدث خطأ
+Something went wrong,حدث خطأ ما
+Profile,الملف الشخصي
+Time,الوقت
+Mobile number is required,رقم الجوال مطلوب
+Email is Required,البريد الإلكتروني مطلوب
+January,يناير
+February,فبراير
+March,مارس
+April,أبريل
+May,مايو
+June,يونيو
+July,يوليو
+August,أغسطس
+September,سبتمبر
+October,أكتوبر
+November,نوفمبر
+December,ديسمبر
+Grades,الدرجات
+Expand,توسيع
+Collapse,طي
+Log out,تسجيل الخروج
+Sun,الأحد
+Mon,الاثنين
+Tue,الثلاثاء
+Wed,الأربعاء
+Thu,الخميس
+Fri,الجمعة
+Sat,السبت
+Jan,ينا
+Feb,فبر
+Mar,مار
+Apr,أبر
+May,ماي
+Jun,يون
+Jul,يول
+Aug,أغس
+Sep,سبت
+Oct,أكت
+Nov,نوف
+Dec,ديس
