@@ -578,7 +578,7 @@ export default class Grid {
 				this.sticky_offsets[df.fieldname] = sticky_sum;
 				this.wrapper
 					.find(`.grid-static-col[data-fieldname="${df.fieldname}"]`)
-					.css("left", `${sticky_sum}px`);
+					.css(frappe.utils.css_inset_inline_start(`${sticky_sum}px`));
 				sticky_sum += w;
 			}
 		}

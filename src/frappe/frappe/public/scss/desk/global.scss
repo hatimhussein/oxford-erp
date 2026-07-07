@@ -564,12 +564,13 @@ kbd {
 
 /*rtl styles*/
 
-.frappe-rtl {
+.frappe-rtl,
+[dir="rtl"] {
 	text-align: right;
 
 	.modal-actions {
-		right: auto !important;
-		left: 5px;
+		inset-inline-end: auto !important;
+		inset-inline-start: 5px;
 	}
 
 	input,
@@ -578,8 +579,8 @@ kbd {
 	}
 
 	.checkbox .disp-area {
-		margin-right: -20px;
-		margin-left: 0px;
+		margin-inline-end: -20px;
+		margin-inline-start: 0px;
 	}
 }
 
@@ -690,8 +691,7 @@ details > summary:focus {
 		top: var(--wrap-padding);
 		position: absolute;
 		bottom: var(--wrap-padding);
-		left: var(--wrap-padding);
-		right: var(--wrap-padding);
+		inset-inline: var(--wrap-padding);
 		pointer-events: none;
 	}
 }

@@ -45,7 +45,7 @@ defineExpose({ show, hide });
 	position: fixed;
 	z-index: 9999;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 	background: rgba(0, 0, 0, 0.6);
 	border-radius: var(--radius);
 	padding: 0.5rem 1rem;

@@ -1,6 +1,6 @@
 @media screen and (min-width: 567px) {
   #page-order .main-column .page-content-wrapper .breadcrumb-container {
-    padding-right: var(--padding-sm);
+    padding-left: var(--padding-sm);
   }
 }
 #page-order .main-column .page-content-wrapper .container.my-4 {
@@ -89,15 +89,15 @@
   }
 }
 .order-taxes .col-4 {
-  padding-left: 0;
+  padding-right: 0;
 }
 .order-taxes .col-4 .col-8 {
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 @media screen and (max-width: 567px) {
   .order-taxes .col-4 {
-    padding-right: 0;
+    padding-left: 0;
     flex: auto;
     max-width: 100%;
   }
@@ -140,7 +140,7 @@
 }
 @media screen and (max-width: 567px) {
   .website-list {
-    margin-right: -2rem;
+    margin-left: -2rem;
   }
 }
 .website-list.result {
@@ -158,7 +158,7 @@
 .transaction-list-item a.transaction-item-link {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -169,7 +169,7 @@
 }
 
 .place-order-container {
-  text-align: left;
+  text-align: right;
 }
 
 .kb-card .card-body > .card-title {

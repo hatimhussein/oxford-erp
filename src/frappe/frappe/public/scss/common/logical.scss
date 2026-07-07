@@ -1,0 +1,58 @@
+// Direction-aware layout utilities using CSS logical properties.
+// These work in both LTR and RTL without a separate rtlcss bundle.
+
+.text-start {
+	text-align: start;
+}
+
+.text-end {
+	text-align: end;
+}
+
+.margin-inline-start {
+	margin-inline-start: var(--margin-sm);
+}
+
+.margin-inline-end {
+	margin-inline-end: var(--margin-sm);
+}
+
+.ms-auto {
+	margin-inline-start: auto;
+}
+
+.me-auto {
+	margin-inline-end: auto;
+}
+
+.inset-inline-start-0 {
+	inset-inline-start: 0;
+}
+
+.inset-inline-end-0 {
+	inset-inline-end: 0;
+}
+
+.inset-inline-end-20 {
+	inset-inline-end: 20px;
+}
+
+.fixed-bottom-inline-end {
+	position: fixed;
+	bottom: 24px;
+	inset-inline-end: 20px;
+}
+
+.fixed-bottom-inline-end-sm {
+	position: fixed;
+	bottom: 0;
+	inset-inline-end: 20px;
+}
+
+.fixed-overlay {
+	position: fixed;
+	top: 0;
+	inset-inline-start: 0;
+	width: 100%;
+	height: 100%;
+}

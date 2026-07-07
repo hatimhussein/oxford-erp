@@ -510,7 +510,7 @@ body.full-width {
 
 	.scroll-to-top {
 		position: absolute;
-		right: 15px;
+		inset-inline-end: 15px;
 		bottom: 15px;
 		height: 28px;
 		flex-shrink: 0;
@@ -522,7 +522,7 @@ body.full-width {
 
 		&.show {
 			position: fixed;
-			right: calc(var(--form-sidebar-width, 277px) + 20px);
+			inset-inline-end: calc(var(--form-sidebar-width, 277px) + 20px);
 			bottom: 20px;
 			z-index: 1030;
 			opacity: 1;

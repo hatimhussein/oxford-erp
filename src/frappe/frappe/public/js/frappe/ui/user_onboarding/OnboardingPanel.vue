@@ -228,7 +228,7 @@ function markReset(step) {
 </script>
 
 <template>
-	<div v-if="visible" class="onb-panel">
+	<div v-if="visible" class="onb-panel fixed-bottom-inline-end">
 		<!-- Header -->
 
 		<div class="header onb-header-main">

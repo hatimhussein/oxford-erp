@@ -42,3 +42,35 @@
 ) {
 	// Deprecated: Does not work as expected anymore. Also, this never worked in Safari.
 }
+
+@mixin inset-inline-end($value) {
+	inset-inline-end: $value;
+}
+
+@mixin inset-inline-start($value) {
+	inset-inline-start: $value;
+}
+
+@mixin margin-inline-start($value) {
+	margin-inline-start: $value;
+}
+
+@mixin margin-inline-end($value) {
+	margin-inline-end: $value;
+}
+
+@mixin padding-inline-start($value) {
+	padding-inline-start: $value;
+}
+
+@mixin padding-inline-end($value) {
+	padding-inline-end: $value;
+}
+
+@mixin border-inline-start($value) {
+	border-inline-start: $value;
+}
+
+@mixin border-inline-end($value) {
+	border-inline-end: $value;
+}

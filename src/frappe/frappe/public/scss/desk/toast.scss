@@ -1,11 +1,11 @@
 #alert-container {
 	position: fixed;
 	bottom: 0px;
-	right: 20px;
+	inset-inline-end: 20px;
 	z-index: 2000;
 
 	@include media-breakpoint-down(sm) {
-		right: 0;
+		inset-inline-end: 0;
 	}
 }
 
@@ -73,7 +73,7 @@
 	.close {
 		position: absolute;
 		top: 18px;
-		right: var(--padding-md);
+		inset-inline-end: var(--padding-md);
 		color: inherit;
 		opacity: 1;
 		font-size: inherit;

@@ -1173,6 +1173,26 @@ Object.assign(frappe.utils, {
 	is_rtl(lang = null) {
 		return ["ar", "he", "fa", "ps"].includes(lang || frappe.boot.lang);
 	},
+	css_inset_inline_end(value) {
+		return {
+			"inset-inline-end": value || "",
+			right: "",
+			left: "",
+		};
+	},
+	css_inset_inline_start(value) {
+		return {
+			"inset-inline-start": value || "",
+			right: "",
+			left: "",
+		};
+	},
+	apply_inset_inline_end($el, value) {
+		$($el).css(frappe.utils.css_inset_inline_end(value));
+	},
+	apply_inset_inline_start($el, value) {
+		$($el).css(frappe.utils.css_inset_inline_start(value));
+	},
 	bind_actions_with_object($el, object) {
 		// remove previously bound event
 		$($el).off("click.class_actions");

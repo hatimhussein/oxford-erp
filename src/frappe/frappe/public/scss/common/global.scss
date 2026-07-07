@@ -31,11 +31,11 @@ body {
 	}
 
 	.help-box {
-		padding-left: 22px;
+		padding-inline-start: 22px;
 		margin-top: 0px;
 
 		@media (max-width: map-get($grid-breakpoints, "lg")) {
-			padding-left: 26px;
+			padding-inline-start: 26px;
 		}
 	}
 }
@@ -48,13 +48,13 @@ body {
 
 .frappe-control[data-fieldtype="Select"].frappe-control[data-fieldname="color"] {
 	.color-select {
-		padding-left: 40px;
+		padding-inline-start: 40px;
 	}
 
 	.color-box {
 		position: absolute;
 		top: calc(50% - 11px);
-		left: 8px;
+		inset-inline-start: 8px;
 		width: 22px;
 		height: 22px;
 		border-radius: 5px;
@@ -72,20 +72,19 @@ body {
 		/* for Chrome */
 		-webkit-appearance: none;
 
-		padding-right: 28px;
+		padding-inline-end: 28px;
 	}
 
 	.select-icon {
-		padding-left: inherit;
-		padding-right: inherit;
+		padding-inline: inherit;
 		position: absolute;
 		pointer-events: none;
 		top: 3px;
-		right: 12px;
+		inset-inline-end: 12px;
 
 		&.xs {
 			top: 3px;
-			right: 10px;
+			inset-inline-end: 10px;
 		}
 
 		.icon {
@@ -96,12 +95,11 @@ body {
 	}
 
 	.placeholder {
-		padding-left: inherit;
-		padding-right: inherit;
+		padding-inline: inherit;
 		position: absolute;
 		pointer-events: none;
 		top: 3px;
-		left: 12px;
+		inset-inline-start: 12px;
 		max-width: 80%;
 
 		&.xs {
@@ -169,10 +167,10 @@ body {
 	margin-bottom: var(--margin-sm);
 }
 .margin-left {
-	margin-left: var(--margin-sm);
+	margin-inline-start: var(--margin-sm);
 }
 .margin-right {
-	margin-right: var(--margin-sm);
+	margin-inline-end: var(--margin-sm);
 }
 .info-card {
 	display: none;

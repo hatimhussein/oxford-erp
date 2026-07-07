@@ -655,7 +655,10 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 	}
 	handle_filter_styles(wrapper) {
 		if (wrapper.find("select")) {
-			wrapper.find(".select-icon").css("left", wrapper.find("select").width() + 18 + "px");
+			frappe.utils.apply_inset_inline_start(
+				wrapper.find(".select-icon"),
+				wrapper.find("select").width() + 18 + "px"
+			);
 		}
 
 		if (wrapper.find(".multiselect-list")) {

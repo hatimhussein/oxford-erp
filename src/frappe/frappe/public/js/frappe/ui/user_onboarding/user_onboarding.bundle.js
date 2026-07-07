@@ -71,9 +71,6 @@ function addStyles() {
 	style.innerHTML = `
 
 	.onb-panel {
-		position: fixed;
-		inset-inline-end: 20px;
-		bottom: 24px;
 		width: 310px;
 		max-height: 80vh;
 		background: #fff;
