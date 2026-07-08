@@ -140,7 +140,6 @@ init_bench_if_needed() {
 		--python "$(command -v python3)"
 
 	cd "${BENCH_DIR}"
-	bench get-app --soft-link "${WORKSPACE_SRC}/frappe"
 	bench get-app --soft-link "${WORKSPACE_SRC}/erpnext"
 	bench get-app --soft-link "${WORKSPACE_SRC}/education"
 
