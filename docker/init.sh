@@ -127,20 +127,23 @@ init_bench_if_needed() {
 		exit 1
 	fi
 
-	log "Initializing bench (local frappe only — no GitHub)"
+	log "Initializing bench skeleton"
 	mkdir -p "$(dirname "${BENCH_DIR}")"
 
-	# bench init creates the skeleton under BENCH_DIR only; --frappe-path reads local
-	# source without modifying the bind-mounted repository.
+	# bench init creates the skeleton under BENCH_DIR only; local apps are linked
+	# afterwards because --frappe-path can fail with bind-mounted source trees.
 	# Bind mount creates an empty BENCH_DIR before first init; bench refuses otherwise.
 	bench init "${BENCH_DIR}" \
 		--ignore-exist \
-		--frappe-path "${WORKSPACE_SRC}/frappe" \
 		--skip-redis-config-generation \
 		--skip-assets \
 		--python "$(command -v python3)"
 
 	cd "${BENCH_DIR}"
+	bench get-app --soft-link "${WORKSPACE_SRC}/frappe"
+	bench get-app --soft-link "${WORKSPACE_SRC}/erpnext"
+	bench get-app --soft-link "${WORKSPACE_SRC}/education"
+
 	configure_bench_services
 	bash "${DOCKER_SCRIPTS}/link-local-apps.sh"
 	configure_procfile_for_docker
