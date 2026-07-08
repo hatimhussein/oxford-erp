@@ -156,8 +156,10 @@ ensure_app_links() {
 install_python_deps() {
 	log "Installing Python dependencies"
 	cd "${BENCH_DIR}"
-	bench setup requirements
-	bench setup requirements --dev
+	for app in frappe erpnext education; do
+		"${BENCH_DIR}/env/bin/python" -m pip install --upgrade -e "${WORKSPACE_SRC}/${app}"
+	done
+	"${BENCH_DIR}/env/bin/python" -m pip install --upgrade -e "${WORKSPACE_SRC}/frappe[dev,test]"
 }
 
 install_node_deps() {
