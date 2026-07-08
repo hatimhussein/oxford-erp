@@ -140,8 +140,9 @@ init_bench_if_needed() {
 		--python "$(command -v python3)"
 
 	cd "${BENCH_DIR}"
-	bench get-app --soft-link "${WORKSPACE_SRC}/erpnext"
-	bench get-app --soft-link "${WORKSPACE_SRC}/education"
+	ensure_workspace_sites_link
+	bench get-app --soft-link --skip-assets "${WORKSPACE_SRC}/erpnext"
+	bench get-app --soft-link --skip-assets "${WORKSPACE_SRC}/education"
 
 	configure_bench_services
 	bash "${DOCKER_SCRIPTS}/link-local-apps.sh"
