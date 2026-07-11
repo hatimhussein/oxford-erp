@@ -13094,6 +13094,7 @@ kbd {
 }
 
 /*rtl styles*/
+/*rtl:begin:ignore*/
 .frappe-rtl,
 [dir=rtl] {
   text-align: right;
@@ -13111,7 +13112,7 @@ kbd {
 [dir=rtl] textarea,
 [dir=rtl] select {
   direction: rtl !important;
-  text-align: right;
+  text-align: right !important;
   font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
 }
 .frappe-rtl .checkbox .disp-area,
@@ -13119,6 +13120,7 @@ kbd {
   margin-inline-end: -20px;
   margin-inline-start: 0px;
 }
+/*rtl:end:ignore*/
 
 /* broken image styling */
 img.no-image {

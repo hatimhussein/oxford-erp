@@ -58,6 +58,16 @@ html, body, .frappe-control, input, textarea, select, button, .btn {
 [dir="rtl"] .dropdown-menu {
 	font-family: var(--font-stack);
 }
+
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select,
+.frappe-rtl input,
+.frappe-rtl textarea,
+.frappe-rtl select {
+	direction: rtl !important;
+	text-align: right !important;
+}
 /*rtl:end:ignore*/
 
 .text-ink-gray-7 {

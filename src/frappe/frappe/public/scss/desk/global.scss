@@ -562,8 +562,8 @@ kbd {
 	color: var(--text-muted);
 }
 
-/*rtl styles*/
-
+/*rtl styles — must ignore rtlcss flip (these selectors already target RTL) */
+/*rtl:begin:ignore*/
 .frappe-rtl,
 [dir="rtl"] {
 	text-align: right;
@@ -587,9 +587,10 @@ kbd {
 [dir="rtl"] textarea,
 [dir="rtl"] select {
 	direction: rtl !important;
-	text-align: right;
+	text-align: right !important;
 	font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
 }
+/*rtl:end:ignore*/
 
 /* broken image styling */
 
