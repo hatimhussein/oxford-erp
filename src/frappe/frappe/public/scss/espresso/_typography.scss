@@ -42,7 +42,7 @@ html, body, .frappe-control, input, textarea, select, button, .btn {
 .frappe-rtl {
 	--font-stack: "Cairo", "Segoe UI", Tahoma, "InterVariable", "Inter", sans-serif;
 	font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
-	text-align: right;
+	text-align: right !important;
 }
 
 [dir="rtl"] body,
@@ -57,6 +57,7 @@ html, body, .frappe-control, input, textarea, select, button, .btn {
 [dir="rtl"] .list-row,
 [dir="rtl"] .dropdown-menu {
 	font-family: var(--font-stack);
+	text-align: right !important;
 }
 
 [dir="rtl"] input,
@@ -66,6 +67,12 @@ html, body, .frappe-control, input, textarea, select, button, .btn {
 .frappe-rtl textarea,
 .frappe-rtl select {
 	direction: rtl !important;
+	text-align: right !important;
+}
+
+html[dir="rtl"] *:not(code):not(pre):not(.ace_editor):not(.ace_content):not(.chart-container):not(svg):not(path),
+[dir="rtl"] *:not(code):not(pre):not(.ace_editor):not(.ace_content):not(.chart-container):not(svg):not(path),
+.frappe-rtl *:not(code):not(pre):not(.ace_editor):not(.ace_content):not(.chart-container):not(svg):not(path) {
 	text-align: right !important;
 }
 /*rtl:end:ignore*/

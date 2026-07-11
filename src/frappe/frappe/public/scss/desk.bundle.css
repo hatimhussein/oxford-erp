@@ -13097,7 +13097,7 @@ kbd {
 /*rtl:begin:ignore*/
 .frappe-rtl,
 [dir=rtl] {
-  text-align: right;
+  text-align: right !important;
   font-family: "Cairo", "Segoe UI", Tahoma, var(--font-stack);
 }
 .frappe-rtl .modal-actions,
@@ -13120,7 +13120,34 @@ kbd {
   margin-inline-end: -20px;
   margin-inline-start: 0px;
 }
+html[dir="rtl"],
+html[dir="rtl"] body,
+body.frappe-rtl {
+  text-align: right !important;
+  direction: rtl;
+}
+html[dir="rtl"] *:not(code):not(pre):not(.ace_editor):not(.ace_content):not(.chart-container):not(svg):not(path),
+[dir=rtl] *:not(code):not(pre):not(.ace_editor):not(.ace_content):not(.chart-container):not(svg):not(path),
+.frappe-rtl *:not(code):not(pre):not(.ace_editor):not(.ace_content):not(.chart-container):not(svg):not(path) {
+  text-align: right !important;
+}
 /*rtl:end:ignore*/
+
+/*rtl:raw:
+html, body {
+	text-align: right !important;
+	direction: rtl;
+}
+*:not(code):not(pre):not(.ace_editor):not(.ace_content):not(.chart-container):not(svg):not(path) {
+	text-align: right !important;
+}
+.frappe-rtl input, .frappe-rtl textarea, .frappe-rtl select,
+[dir="rtl"] input, [dir="rtl"] textarea, [dir="rtl"] select,
+input, textarea, select {
+	direction: rtl !important;
+	text-align: right !important;
+}
+*/
 
 /* broken image styling */
 img.no-image {
