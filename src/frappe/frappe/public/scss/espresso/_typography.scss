@@ -31,7 +31,34 @@
 :root {
 	--font-stack: "Cairo", "Segoe UI", Tahoma, "InterVariable", "Inter", sans-serif;
 }
+html, body, .frappe-control, input, textarea, select, button, .btn {
+	font-family: "Cairo", "Segoe UI", Tahoma, sans-serif !important;
+}
 */
+
+/* Also apply when HTML dir=rtl (covers Desk + Website even if LTR bundle loads) */
+/*rtl:begin:ignore*/
+[dir="rtl"],
+.frappe-rtl {
+	--font-stack: "Cairo", "Segoe UI", Tahoma, "InterVariable", "Inter", sans-serif;
+	font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+	text-align: right;
+}
+
+[dir="rtl"] body,
+[dir="rtl"] .page-container,
+[dir="rtl"] .frappe-control,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select,
+[dir="rtl"] button,
+[dir="rtl"] .btn,
+[dir="rtl"] .modal,
+[dir="rtl"] .list-row,
+[dir="rtl"] .dropdown-menu {
+	font-family: var(--font-stack);
+}
+/*rtl:end:ignore*/
 
 .text-ink-gray-7 {
 	color: var(--ink-gray-7);
