@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "frappe/public/css/fonts/inter/inter.css";
+@import "frappe/public/css/fonts/cairo/cairo.css";
 @import "frappe/public/css/espresso/colors.css";
 @import "frappe/public/css/espresso/legacy.css";
 @import "frappe/public/css/espresso/spacing.css";
@@ -1583,6 +1584,39 @@ a.plyr__control {
   --para-line-height-2xl: 148%;
   --para-line-height-3xl: 140%;
 }
+
+/* Injected only into rtl_*.bundle.css when RTL languages are active */
+/*rtl:raw:
+:root {
+	--font-stack: "Cairo", "Segoe UI", Tahoma, "InterVariable", "Inter", sans-serif;
+}
+html, body, .frappe-control, input, textarea, select, button, .btn {
+	font-family: "Cairo", "Segoe UI", Tahoma, sans-serif !important;
+}
+*/
+
+/*rtl:begin:ignore*/
+[dir="rtl"],
+.frappe-rtl {
+	--font-stack: "Cairo", "Segoe UI", Tahoma, "InterVariable", "Inter", sans-serif;
+	font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+	text-align: right;
+}
+
+[dir="rtl"] body,
+[dir="rtl"] .page-container,
+[dir="rtl"] .frappe-control,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select,
+[dir="rtl"] button,
+[dir="rtl"] .btn,
+[dir="rtl"] .modal,
+[dir="rtl"] .list-row,
+[dir="rtl"] .dropdown-menu {
+	font-family: var(--font-stack);
+}
+/*rtl:end:ignore*/
 
 .text-ink-gray-7 {
   color: var(--ink-gray-7);
@@ -13063,6 +13097,7 @@ kbd {
 .frappe-rtl,
 [dir=rtl] {
   text-align: right;
+  font-family: "Cairo", "Segoe UI", Tahoma, var(--font-stack);
 }
 .frappe-rtl .modal-actions,
 [dir=rtl] .modal-actions {
@@ -13071,9 +13106,13 @@ kbd {
 }
 .frappe-rtl input,
 .frappe-rtl textarea,
+.frappe-rtl select,
 [dir=rtl] input,
-[dir=rtl] textarea {
+[dir=rtl] textarea,
+[dir=rtl] select {
   direction: rtl !important;
+  text-align: right;
+  font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
 }
 .frappe-rtl .checkbox .disp-area,
 [dir=rtl] .checkbox .disp-area {
