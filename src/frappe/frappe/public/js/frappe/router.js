@@ -428,6 +428,11 @@ frappe.router = {
 			route.shift();
 		}
 
+		const base_segment = this.get_base_path().replace(/^\//, "");
+		if (base_segment && route && route[0] === base_segment) {
+			route.shift();
+		}
+
 		if (route && ["desk", "app"].includes(route[0])) {
 			// we only need subpath, remove "app" (or "desk")
 			route.shift();
