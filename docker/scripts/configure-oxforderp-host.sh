@@ -46,6 +46,10 @@ docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 	bench --site "${SITE_NAME}" set-config hostname "${HOST_NAME}" || true
 
+# Use HTTPS port for Socket.IO (LiteSpeed proxies /socket.io → Docker :9000)
+docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
+	bench --site "${SITE_NAME}" set-config socketio_port 443
+
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 	bench use "${SITE_NAME}" || true
 
@@ -54,5 +58,6 @@ docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 	bench --site "${SITE_NAME}" clear-cache
 
 echo "==> Done. Public URL: ${HOST_NAME}/desk"
-echo "    Ensure SITE_NAME=${SITE_NAME} in .env matches, then: docker compose up -d --force-recreate nginx"
-echo "    Ensure host SSL proxy is configured (see nginx/host-arrdh-oxforderp.conf)"
+echo "    Recreate nginx: docker compose up -d --force-recreate --no-deps nginx"
+echo "    Update public_html/.htaccess from nginx/public_html-oxforderp.htaccess-snippet"
+echo "    Add OLS Contexts for /assets/frappe /api/method /socket.io if rewrite [P] is not enough"

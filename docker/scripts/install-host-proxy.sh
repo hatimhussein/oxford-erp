@@ -164,16 +164,32 @@ install_litespeed_htaccess() {
 	fi
 	local tmp
 	tmp="$(mktemp)"
-	cat > "${tmp}" <<EOF
+	local script_dir
+	script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+	local snippet="${script_dir}/../nginx/public_html-oxforderp.htaccess-snippet"
+	if [[ -f "${snippet}" ]]; then
+		# Normalize marker name inside snippet copy
+		sed "s/oxforderp-docker-proxy/${MARKER}/g" "${snippet}" > "${tmp}"
+		echo "" >> "${tmp}"
+	else
+		cat > "${tmp}" <<EOF
 # BEGIN ${MARKER}
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule ^oxforderp\$ /oxforderp/ [R=301,L]
 RewriteRule ^oxforderp/(.*)\$ http://127.0.0.1:8088/oxforderp/\$1 [P,L]
+RewriteRule ^assets/(frappe|erpnext|education)/(.*)\$ http://127.0.0.1:8088/assets/\$1/\$2 [P,L]
+RewriteRule ^assets-rtl/(.*)\$ http://127.0.0.1:8088/assets-rtl/\$1 [P,L]
+RewriteRule ^api/method/(.*)\$ http://127.0.0.1:8088/api/method/\$1 [P,L]
+RewriteRule ^api/resource/(.*)\$ http://127.0.0.1:8088/api/resource/\$1 [P,L]
+RewriteRule ^files/(.*)\$ http://127.0.0.1:8088/files/\$1 [P,L]
+RewriteRule ^private/files/(.*)\$ http://127.0.0.1:8088/private/files/\$1 [P,L]
+RewriteRule ^socket\\.io(.*)\$ http://127.0.0.1:8088/socket.io\$1 [P,L]
 </IfModule>
 # END ${MARKER}
 
 EOF
+	fi
 	cat "${htaccess}" >> "${tmp}"
 	mv "${tmp}" "${htaccess}"
 	chown --reference="${docroot}" "${htaccess}" 2>/dev/null || true

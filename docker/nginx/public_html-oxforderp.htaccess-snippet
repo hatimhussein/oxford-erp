@@ -1,6 +1,19 @@
+# BEGIN oxforderp-docker-proxy
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# https://arrdh.com/oxforderp → Docker nginx on 127.0.0.1:8088
+
+# App under /oxforderp
 RewriteRule ^oxforderp$ /oxforderp/ [R=301,L]
 RewriteRule ^oxforderp/(.*)$ http://127.0.0.1:8088/oxforderp/$1 [P,L]
+
+# Frappe loads these at domain root (not under /oxforderp) — proxy only ERP paths
+# so the Laravel landing page keeps its own routes.
+RewriteRule ^assets/(frappe|erpnext|education)/(.*)$ http://127.0.0.1:8088/assets/$1/$2 [P,L]
+RewriteRule ^assets-rtl/(.*)$ http://127.0.0.1:8088/assets-rtl/$1 [P,L]
+RewriteRule ^api/method/(.*)$ http://127.0.0.1:8088/api/method/$1 [P,L]
+RewriteRule ^api/resource/(.*)$ http://127.0.0.1:8088/api/resource/$1 [P,L]
+RewriteRule ^files/(.*)$ http://127.0.0.1:8088/files/$1 [P,L]
+RewriteRule ^private/files/(.*)$ http://127.0.0.1:8088/private/files/$1 [P,L]
+RewriteRule ^socket\.io(.*)$ http://127.0.0.1:8088/socket.io$1 [P,L]
 </IfModule>
+# END oxforderp-docker-proxy
