@@ -61,7 +61,10 @@ echo "==> Clearing cache"
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 	bench --site "${SITE_NAME}" clear-cache
 
+echo "==> Rebuilding desk assets (router base_path support)"
+docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
+	bench build --app frappe
+
 echo "==> Done. Public URL: ${HOST_NAME}/desk"
 echo "    Recreate nginx: docker compose up -d --force-recreate --no-deps nginx"
-echo "    Update public_html/.htaccess from nginx/public_html-oxforderp.htaccess-snippet"
-echo "    Add OLS Contexts for /assets/frappe /api/method /socket.io if rewrite [P] is not enough"
+echo "    Hard-refresh browser (Ctrl+Shift+R) on ${HOST_NAME}/desk"

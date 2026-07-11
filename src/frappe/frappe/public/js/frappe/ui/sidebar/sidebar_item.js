@@ -26,13 +26,15 @@ frappe.ui.sidebar_item.get_route = function (item, edit_mode = false) {
 	} else if (item.link_type == "Workspace") {
 		let workspaces = frappe.workspaces[frappe.router.slug(item.link_to)];
 		if (workspaces && workspaces.public) {
-			path = "/desk/" + frappe.router.slug(item.link_to);
+			path = frappe.router.with_base_path("/desk/" + frappe.router.slug(item.link_to));
 		} else {
-			path = "/desk/private/" + frappe.router.slug(item.link_to);
+			path = frappe.router.with_base_path(
+				"/desk/private/" + frappe.router.slug(item.link_to)
+			);
 		}
 
 		if (item.route) {
-			path = item.route;
+			path = frappe.router.with_base_path(item.route);
 		}
 	} else if (item.link_type === "URL") {
 		path = item.url;
