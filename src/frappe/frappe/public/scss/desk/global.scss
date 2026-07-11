@@ -574,18 +574,21 @@ kbd {
 		inset-inline-start: 5px;
 	}
 
-	input,
-	textarea,
-	select {
-		direction: rtl !important;
-		text-align: right;
-		font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
-	}
-
 	.checkbox .disp-area {
 		margin-inline-end: -20px;
 		margin-inline-start: 0px;
 	}
+}
+
+.frappe-rtl input,
+.frappe-rtl textarea,
+.frappe-rtl select,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+	direction: rtl !important;
+	text-align: right;
+	font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
 }
 
 /* broken image styling */
