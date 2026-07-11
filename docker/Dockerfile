@@ -30,4 +30,5 @@ COPY --chown=frappe:frappe scripts/ /workspace/docker/scripts/
 
 RUN chmod +x /workspace/docker/init.sh /workspace/docker/scripts/*.sh
 
-ENTRYPOINT ["/workspace/docker/scripts/entrypoint.sh"]
+# Use bash explicitly so bind-mounted scripts work even without the +x bit
+ENTRYPOINT ["bash", "/workspace/docker/scripts/entrypoint.sh"]
