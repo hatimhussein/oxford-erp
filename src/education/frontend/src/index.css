@@ -1,8 +1,9 @@
 @import './assets/Inter/inter.css';
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
 @import 'frappe-ui/src/style.css';
 
 [dir='rtl'] body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  font-family: 'Cairo', 'Segoe UI', Tahoma, 'Inter', sans-serif;
 }
 
 [dir='rtl'] input,

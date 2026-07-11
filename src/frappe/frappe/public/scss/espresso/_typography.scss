@@ -26,6 +26,13 @@
 	--para-line-height-3xl: 140%;
 }
 
+/* Injected only into rtl_*.bundle.css when RTL languages are active */
+/*rtl:raw:
+:root {
+	--font-stack: "Cairo", "Segoe UI", Tahoma, "InterVariable", "Inter", sans-serif;
+}
+*/
+
 .text-ink-gray-7 {
 	color: var(--ink-gray-7);
 }

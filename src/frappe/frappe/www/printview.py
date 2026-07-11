@@ -628,6 +628,15 @@ def get_print_style(
 
 	css = frappe.get_template("templates/styles/standard.css").render(context)
 
+	if is_rtl() and not (
+		(print_format and print_format.font and print_format.font != "Default")
+		or (print_settings.font and print_settings.font != "Default")
+	):
+		css = (
+			'@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");\n'
+			+ css
+		)
+
 	if style and frappe.db.exists("Print Style", style):
 		css = css + "\n" + frappe.db.get_value("Print Style", style, "css")
 
@@ -652,6 +661,7 @@ def get_font(
 		"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
 		"Helvetica Neue", sans-serif;
 	"""
+	rtl_default = '"Cairo", "Segoe UI", Tahoma, "InterVariable", "Inter", sans-serif;'
 	if for_legacy:
 		return default
 
@@ -665,7 +675,7 @@ def get_font(
 			font = f"{print_settings.font}, sans-serif"
 
 		else:
-			font = default
+			font = rtl_default if is_rtl() else default
 
 	return font
 

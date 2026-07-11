@@ -1206,3 +1206,9 @@ body {
     display: none;
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
+
+[dir="rtl"] {
+  --font-sans: "Cairo", "Segoe UI", Tahoma, "InterVariable", ui-sans-serif, system-ui, sans-serif;
+}
