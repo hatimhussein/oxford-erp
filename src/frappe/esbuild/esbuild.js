@@ -554,7 +554,12 @@ async function get_assets_json_path_and_obj(is_rtl) {
 	} catch (error) {
 		assets_json = "{}";
 	}
-	assets_json = JSON.parse(assets_json);
+	try {
+		assets_json = JSON.parse(assets_json && assets_json.trim() ? assets_json : "{}");
+	} catch (error) {
+		log_warn(`${file_name} is invalid JSON — resetting to {}`);
+		assets_json = {};
+	}
 	return { obj: assets_json, path: assets_json_path };
 }
 
