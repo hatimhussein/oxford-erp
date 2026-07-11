@@ -2,10 +2,21 @@
 # Configure Frappe site for https://arrdh.com/oxforderp reverse-proxy.
 # Usage (from host, in docker/):
 #   bash scripts/configure-oxforderp-host.sh
+# Loads SITE_NAME / HOST_NAME from .env when present.
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOCKER_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+if [[ -f "${DOCKER_DIR}/.env" ]]; then
+	set -a
+	# shellcheck disable=SC1091
+	source "${DOCKER_DIR}/.env"
+	set +a
+fi
+
 CONTAINER="${FRAPPE_CONTAINER:-frappedev-frappe}"
-SITE_NAME="${SITE_NAME:-arrdh.com}"
+SITE_NAME="${SITE_NAME:-development.localhost}"
 HOST_NAME="${HOST_NAME:-https://arrdh.com/oxforderp}"
 BENCH_DIR="${BENCH_DIR:-/home/frappe/frappe-bench}"
 
@@ -14,20 +25,34 @@ if ! docker ps --format '{{.Names}}' | grep -qx "${CONTAINER}"; then
 	exit 1
 fi
 
+# Auto-detect site if configured name is missing
+if ! docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
+	test -d "sites/${SITE_NAME}"; then
+	echo "==> Site '${SITE_NAME}' not found — detecting from sites/"
+	DETECTED="$(docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
+		bash -lc 'ls -1 sites | grep -v -E "^(apps|assets|common_site_config.json|currentsite.txt)$" | head -1' || true)"
+	if [[ -z "${DETECTED}" ]]; then
+		echo "ERROR: No site found under ${BENCH_DIR}/sites" >&2
+		exit 1
+	fi
+	echo "    using detected site: ${DETECTED}"
+	SITE_NAME="${DETECTED}"
+fi
+
 echo "==> Setting host_name=${HOST_NAME} on site ${SITE_NAME}"
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 	bench --site "${SITE_NAME}" set-config host_name "${HOST_NAME}"
 
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
-	bench --site "${SITE_NAME}" set-config hostname "${HOST_NAME}"
+	bench --site "${SITE_NAME}" set-config hostname "${HOST_NAME}" || true
 
-# Accept requests whose Host header is arrdh.com even if site folder differs
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
-	bench set-config -g dns_multitenant 0 || true
+	bench use "${SITE_NAME}" || true
 
 echo "==> Clearing cache"
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 	bench --site "${SITE_NAME}" clear-cache
 
 echo "==> Done. Public URL: ${HOST_NAME}/desk"
+echo "    Ensure SITE_NAME=${SITE_NAME} in .env matches, then: docker compose up -d --force-recreate nginx"
 echo "    Ensure host SSL proxy is configured (see nginx/host-arrdh-oxforderp.conf)"
