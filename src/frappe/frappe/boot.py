@@ -168,7 +168,7 @@ def load_conf_settings(bootinfo):
 
 	bootinfo.max_file_size = get_max_file_size()
 	bootinfo.file_chunk_size = get_file_chunk_size()
-	for key in ("developer_mode", "socketio_port", "file_watcher_port"):
+	for key in ("developer_mode", "socketio_port", "file_watcher_port", "base_path"):
 		if key in frappe.conf:
 			bootinfo[key] = frappe.conf.get(key)
 

@@ -105,6 +105,7 @@ frappe.router = {
 		if (!path) return;
 		// desk paths must begin with /app or doctype route
 		if (path.substr(0, 1) === "/") path = path.substr(1);
+		path = this.strip_base_path(path);
 		path = path.split("/");
 		if (path[0]) {
 			return path[0] === "desk";
@@ -494,11 +495,11 @@ frappe.router = {
 		}).join("/");
 
 		if (path_string) {
-			return "/desk/" + path_string;
+			return this.with_base_path("/desk/" + path_string);
 		}
 
 		if (params.length == 0) {
-			return "/desk";
+			return this.with_base_path("/desk");
 		}
 		// Resolution order
 		// 1. User's default workspace in user doctype
@@ -507,7 +508,7 @@ frappe.router = {
 		// 4. First workspace in list of current app
 		// 5. First workspace in list
 
-		return "/desk";
+		return this.with_base_path("/desk");
 	},
 
 	/**
@@ -538,8 +539,32 @@ frappe.router = {
 		return this.strip_prefix(route);
 	},
 
+	get_base_path() {
+		const base = (frappe.boot && frappe.boot.base_path) || "";
+		if (!base || base === "/") return "";
+		return base.endsWith("/") ? base.slice(0, -1) : base;
+	},
+
+	with_base_path(path) {
+		const base = this.get_base_path();
+		if (!base) return path;
+		if (!path.startsWith("/")) path = "/" + path;
+		if (path === base || path.startsWith(base + "/")) return path;
+		return base + path;
+	},
+
+	strip_base_path(route) {
+		// route without leading slash
+		const base = this.get_base_path().replace(/^\//, "");
+		if (!base) return route;
+		if (route === base) return "";
+		if (route.startsWith(base + "/")) return route.slice(base.length + 1);
+		return route;
+	},
+
 	strip_prefix(route) {
 		if (route.substr(0, 1) == "/") route = route.substr(1); // for /desk/sub
+		route = this.strip_base_path(route); // for /oxforderp/desk/sub
 		if (route == "desk") route = route.substr(4); // for app
 		if (route.startsWith("desk/")) route = route.substr(4); // for desk/sub
 		if (route.substr(0, 1) == "/") route = route.substr(1);

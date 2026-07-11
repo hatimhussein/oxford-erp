@@ -50,6 +50,10 @@ docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 	bench --site "${SITE_NAME}" set-config socketio_port 443
 
+# Desk routes under subdirectory (e.g. /oxforderp/desk/...)
+docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
+	bench --site "${SITE_NAME}" set-config base_path "/oxforderp"
+
 docker exec -u frappe -w "${BENCH_DIR}" "${CONTAINER}" \
 	bench use "${SITE_NAME}" || true
 
