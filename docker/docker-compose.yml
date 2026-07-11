@@ -1,4 +1,4 @@
-# FrappeDev — local development stack
+# FrappeDev — local development + arrdh.com/oxforderp reverse-proxy stack
 # App source: ../src/{frappe,erpnext,education} (bind mounts — single source of truth)
 # Bench runtime: ./data/bench (sites, env, logs — persisted, not your git repos)
 
@@ -68,13 +68,27 @@ services:
       - ./init.sh:/workspace/docker/init.sh:ro
       - ./scripts:/workspace/docker/scripts:ro
     ports:
-      - "${WEB_PORT:-8000}:8000"
-      - "${SOCKETIO_PORT:-9000}:9000"
+      # Bind to localhost only — public access goes through host SSL → nginx proxy
+      - "127.0.0.1:${WEB_PORT:-8000}:8000"
+      - "127.0.0.1:${SOCKETIO_PORT:-9000}:9000"
     depends_on:
       mariadb:
         condition: service_healthy
       redis:
         condition: service_healthy
+    networks:
+      - frappe-network
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: frappedev-nginx
+    restart: unless-stopped
+    volumes:
+      - ./nginx/oxforderp.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "127.0.0.1:${PROXY_PORT:-8088}:80"
+    depends_on:
+      - frappe
     networks:
       - frappe-network
 

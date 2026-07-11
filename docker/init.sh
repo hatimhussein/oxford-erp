@@ -225,6 +225,10 @@ configure_developer_mode() {
 	log "Enabling developer mode and scheduler"
 	bench --site "${SITE_NAME}" set-config developer_mode "${DEVELOPER_MODE}"
 	bench --site "${SITE_NAME}" set-config server_script_enabled 1
+	if [[ -n "${HOST_NAME:-}" ]]; then
+		log "Setting host_name=${HOST_NAME}"
+		bench --site "${SITE_NAME}" set-config host_name "${HOST_NAME}"
+	fi
 	bench --site "${SITE_NAME}" enable-scheduler
 	bench --site "${SITE_NAME}" clear-cache
 	bench use "${SITE_NAME}"

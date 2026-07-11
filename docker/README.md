@@ -356,14 +356,53 @@ docker compose up -d
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `SITE_NAME` | `development.localhost` | Bench site name |
+| `SITE_NAME` | `arrdh.com` | Bench site name (must match nginx site header) |
+| `HOST_NAME` | `https://arrdh.com/oxforderp` | Public URL used by Frappe `get_url()` |
 | `ADMIN_PASSWORD` | `admin` | Administrator password |
 | `MARIADB_ROOT_PASSWORD` | `admin` | MariaDB root password |
-| `WEB_PORT` | `8000` | HTTP port |
-| `SOCKETIO_PORT` | `9000` | Socket.IO port |
-| `DEVELOPER_MODE` | `1` | Enables Python auto-reload |
+| `WEB_PORT` | `8000` | Frappe HTTP port (bound to `127.0.0.1` only) |
+| `SOCKETIO_PORT` | `9000` | Socket.IO port (bound to `127.0.0.1` only) |
+| `PROXY_PORT` | `8088` | Docker nginx reverse proxy (`127.0.0.1`) |
+| `DEVELOPER_MODE` | `0` | Enables Python auto-reload when `1` |
 | `SKIP_ASSETS_BUILD` | `0` | Set `1` to skip `bench build` on init |
 | `FORCE_REINSTALL` | `0` | Set `1` to drop and recreate site on init |
+
+---
+
+## Public URL: https://arrdh.com/oxforderp
+
+Traffic flow: browser (HTTPS on host) → host Apache/Nginx → `127.0.0.1:8088` (Docker nginx) → Frappe.
+
+### 1. Start stack
+
+```bash
+cd /home/arrdh.com/oxforderp/docker
+docker compose up -d
+```
+
+### 2. Configure Frappe host_name
+
+```bash
+bash scripts/configure-oxforderp-host.sh
+# or:
+docker compose exec -u frappe -w /home/frappe/frappe-bench frappe \
+  bench --site arrdh.com set-config host_name "https://arrdh.com/oxforderp"
+docker compose exec -u frappe -w /home/frappe/frappe-bench frappe \
+  bench --site arrdh.com clear-cache
+```
+
+If the existing site folder is still `development.localhost`, either rename it to `arrdh.com` under `data/bench/sites/` or change `SITE_NAME` / nginx `X-Frappe-Site-Name` to match the real site name.
+
+### 3. Host SSL reverse proxy
+
+Add the Apache or Nginx block from [`nginx/host-arrdh-oxforderp.conf`](nginx/host-arrdh-oxforderp.conf) to the HTTPS vhost for `arrdh.com`, then reload the host web server.
+
+### 4. Open
+
+- App: https://arrdh.com/oxforderp/desk
+- Example: https://arrdh.com/oxforderp/desk/assets
+
+Do **not** expose `:8000` publicly; it is bound to localhost only.
 
 ---
 
@@ -374,6 +413,7 @@ docker compose up -d
 | MariaDB 11.8 | `frappedev-mariadb` | Database |
 | Redis 7 | `frappedev-redis` | Cache, queue, Socket.IO |
 | Frappe | `frappedev-frappe` | web, socketio, watch, schedule, workers |
+| Nginx | `frappedev-nginx` | Path-prefix reverse proxy (`/oxforderp`) |
 
 Procfile processes (via `bench start`):
 
