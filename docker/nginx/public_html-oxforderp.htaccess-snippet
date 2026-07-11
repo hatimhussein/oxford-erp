@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# https://arrdh.com/oxforderp → Docker nginx on 127.0.0.1:8088
+RewriteRule ^oxforderp$ /oxforderp/ [R=301,L]
+RewriteRule ^oxforderp/(.*)$ http://127.0.0.1:8088/oxforderp/$1 [P,L]
+</IfModule>
